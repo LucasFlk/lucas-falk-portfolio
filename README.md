@@ -64,4 +64,4 @@ No additional dependencies or installations are required.
 Computer Science Student at Cesar School, Recife, Brazil.
 
 - GitHub: [LucasFlk](https://github.com/LucasFlk)
-- LinkedIn: [Lucas Falk](https://www.linkedin.com/in/lucas-falk-b05b27271)
+- LinkedIn: [Lucas Falk](https://www.linkedin.com/in/lucas-falk-dev/)
