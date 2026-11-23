@@ -1,30 +1,30 @@
 
-// ATUALIZAR O ANO DO RODAPE
+// UPDATE FOOTER YEAR
 
-const ano = document.getElementById("ano");
+const year = document.getElementById("year");
 
-if (ano) {
-    ano.textContent = new Date().getFullYear();
+if (year) {
+    year.textContent = new Date().getFullYear();
 }
 
 
-// DESTACAR A SECAO SELECIONADA NO MENU
+// HIGHLIGHT THE SELECTED MENU SECTION
 
 const links = document.querySelectorAll(".menu a");
 
-// Identificar a pagina atual
-const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
+// Identify the current page
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-// Destacar automaticamente a pagina atual
+// Automatically highlight the current page
 links.forEach(function(link) {
 
-    const destino = link.getAttribute("href");
+    const destination = link.getAttribute("href");
 
-    // Ignorar links que apontam diretamente para secoes
-    if (destino && !destino.includes("#")) {
+    // Ignore links that point directly to sections
+    if (destination && !destination.includes("#")) {
 
-        if (destino === paginaAtual) {
-            link.classList.add("ativo");
+        if (destination === currentPage) {
+            link.classList.add("active");
         }
 
     }
@@ -32,19 +32,18 @@ links.forEach(function(link) {
 });
 
 
-// ATUALIZAR O DESTAQUE AO CLICAR NO MENU
+// UPDATE ACTIVE LINK WHEN CLICKING THE MENU
 
 links.forEach(function(link) {
 
     link.addEventListener("click", function() {
 
         links.forEach(function(item) {
-            item.classList.remove("ativo");
+            item.classList.remove("active");
         });
 
-        link.classList.add("ativo");
+        link.classList.add("active");
 
     });
 
 });
-

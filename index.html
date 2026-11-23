@@ -4,47 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio | Lucas Falk</title>
-    <link  rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- CABECALHO -->
-    <header>
-            <nav class="navbar">
-                    <div class="logo">PORTFOLIO</div>
-                    <ul class="menu">
-                        <li><a href="#home" class="ativo">Home</a></li>
-                        <li><a href="#sobre">About Me</a></li>
-                        <li><a href="#conhecimentos">Attributes</a></li>
-                        <li><a href="learning.html">Courses & Learning</a></li>
-                        <li><a href="contacts.html">Get in touch</a></li>
-                    </ul>
-            </nav>
 
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">PORTFOLIO</div>
+
+            <ul class="menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Attributes</a></li>
+                <li><a href="learning.html">Courses & Learning</a></li>
+                <li><a href="contacts.html">Get in touch</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+
         <!-- HOME -->
-        <section id="home" class="secao home" aria-labelledby="titulo-home">
-            <h1 id="titulo-home">Hi, I'm Lucas Falk</h1>
-            <article class="home-texto">
-                
-                <h2 class="subtitulo-home">Computer Science Major</h2>
-                
+        <section id="home" class="section home" aria-labelledby="home-title">
+
+            <h1 id="home-title">Hi, I'm Lucas Falk</h1>
+
+            <article class="home-text">
+
+                <h2 class="home-subtitle">Computer Science Major</h2>
+
                 <p>
                     Welcome to my personal portfolio!
                     Here you can get to know more about me,
                     my attributes and projects.
                 </p>
-            
-                <a href="#sobre" class="botao">Get to know me</a>
+
+                <a href="#about" class="button">Get to know me</a>
+
             </article>
-            <figure class="home-imagem">
-                <img src="images/minha-foto.jpg" alt="Lucas Falk" class="foto-perfil">
+
+            <figure class="home-image">
+                <img src="images/minha-foto.jpg" alt="Lucas Falk" class="profile-photo">
             </figure>
+
         </section>
 
-        <!-- Sobre Mim-->
-        <section id="sobre" class="secao">
+        <!-- ABOUT ME -->
+        <section id="about" class="section">
+
             <h2>About Me</h2>
 
             <p>
@@ -56,23 +64,30 @@
             </p>
 
         </section>
-        <!--Atributos e conhecimentos-->
-        <section id="conhecimentos" class="secao">
+
+        <!-- ATTRIBUTES AND KNOWLEDGE -->
+        <section id="skills" class="section">
+
             <h2>Attributes and Knowledge</h2>
+
             <h3>Hard Skills</h3>
+
             <ul class="hard-skills">
                 <li>
                     <img src="images/html.svg" alt="HTML5">
                     <p>HTML</p>
                 </li>
+
                 <li>
                     <img src="images/css.svg" alt="CSS3">
                     <p>CSS</p>
                 </li>
+
                 <li>
                     <img src="images/javascript.svg" alt="JavaScript">
                     <p>JavaScript</p>
                 </li>
+
                 <li>
                     <img src="images/python.svg" alt="Python">
                     <p>Python</p>
@@ -82,19 +97,22 @@
             <h3>Soft Skills</h3>
 
             <ul>
-                <li>Team Work</li>
+                <li>Teamwork</li>
                 <li>Organization</li>
                 <li>Problem Solving</li>
                 <li>Communication</li>
             </ul>
+
         </section>
+
     </main>
 
-    <!-- RODAPE-->
+    <!-- FOOTER -->
     <footer>
-        <p>© <span id="ano"></span> - My Personal Portfolio</p>
+        <p>© <span id="year"></span> - My Personal Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
