@@ -12,7 +12,10 @@
     <!-- HEADER -->
     <header>
         <nav class="navbar">
-            <div class="logo">PORTFOLIO</div>
+            <div class="logo">
+                <img  id="LF" src="images/logo_portfolio.png" alt="LF logo">
+                <span> PORTFOLIO</span>
+            </div>
 
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
@@ -67,16 +70,14 @@
 
                     </div>
 
-                    <a href="images/javascript-certificate.png"
-                       target="_blank"
-                       rel="noopener noreferrer">
 
-                        <img
-                            src="images/javascript-certificate.png"
-                            alt="JavaScript Essentials 1 Certificate"
-                            class="certificate">
+                    <img
+                        src="images/javascript-certificate.png"
+                        alt="JavaScript Essentials 1 Certificate"
+                        class="certificate"
+                        onclick="openCertificate(this)">
 
-                    </a>
+                   
 
                 </div>
 
@@ -208,5 +209,11 @@
 
     <script src="script.js"></script>
 
+<!-- CERTIFICATE LIGHTBOX -->
+<div id="certificate-lightbox" onclick="closeCertificate()">
+    <span class="lightbox-close">&times;</span>
+    <img id="expanded-certificate" src="" alt="Expanded certificate">
+</div>
 </body>
+
 </html>

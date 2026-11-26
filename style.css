@@ -1,4 +1,15 @@
 
+/* COLOR PALETTE */
+
+:root {
+    --color-black: #171717;
+    --color-graphite: #202020;
+    --color-red: #C41E2A;
+    --color-white: #F2F2F2;
+    --color-gray: #777777;
+    --color-border: #3A3A3A;
+}
+
 /* GENERAL SETTINGS */
 
 * {
@@ -13,17 +24,16 @@ html {
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #f5f5f5;
-    color: #222;
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
-
 
 /* HEADER */
 
 header {
-    background-color: #ffffff;
+    background-color: var(--color-graphite);
     padding: 25px 8%;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .navbar {
@@ -33,7 +43,18 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 22px;
+    color: var(--color-white);
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .menu {
@@ -44,22 +65,20 @@ header {
 
 .menu a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-white);
     transition: 0.3s;
 }
 
 .menu a:hover {
-    color: #888;
+    color: var(--color-red);
 }
-
 
 /* ACTIVE LINK */
 
 .menu a.active {
-    color: #888;
+    color: var(--color-red);
     font-weight: bold;
 }
-
 
 /* SECTIONS */
 
@@ -82,24 +101,25 @@ header {
     line-height: 1.8;
 }
 
-
 /* HOME */
 
 .home {
-    background-color: #eeeeee;
+    background-color: var(--color-black);
     display: grid;
     grid-template-columns: minmax(0, 1fr) 280px;
     grid-template-areas:
         "title image"
         "text image";
     align-items: center;
+    align-content: center;
     column-gap: 80px;
-    row-gap: 15px;
+    row-gap: 10px;
 }
 
 .home > h1 {
     grid-area: title;
     align-self: end;
+    margin: 0;
 }
 
 .home-text {
@@ -107,11 +127,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 25px;
+    gap: 20px;
     min-width: 0;
+    margin: 0;
 }
 
 .home-image {
+    grid-area: image;
     width: 280px;
     height: 320px;
     margin: 0;
@@ -129,13 +151,30 @@ header {
 
 .home h1 {
     font-size: 42px;
+    color: var(--color-white);
 }
 
 .home h2 {
     font-size: 23px;
     font-weight: normal;
+    color: var(--color-red);
 }
 
+.home p {
+    color: var(--color-white);
+}
+
+/* HOME TEXT */
+
+.home-text hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home-subtitle {
+    font-size: 20px;
+}
 
 /* BUTTON */
 
@@ -144,17 +183,19 @@ header {
     width: fit-content;
     padding: 12px 25px;
 
-    background-color: #222;
-    color: white;
+    background-color: var(--color-red);
+    color: #FFFFFF;
 
     text-decoration: none;
+    border: 1px solid var(--color-red);
     transition: 0.3s;
 }
 
 .button:hover {
-    background-color: #555;
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-black);
 }
-
 
 /* LISTS */
 
@@ -183,8 +224,8 @@ header {
     justify-content: center;
     gap: 12px;
 
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: var(--color-graphite);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
 
     transition: 0.3s;
@@ -199,17 +240,18 @@ header {
 .hard-skills li p {
     font-size: 14px;
     line-height: 1.2;
+    color: var(--color-white);
 }
 
 .hard-skills li:hover {
     transform: translateY(-5px);
+    border-color: var(--color-red);
 }
-
 
 /* CONTACT */
 
 #contact a {
-    color: #333;
+    color: var(--color-red);
     text-decoration: none;
 }
 
@@ -217,16 +259,15 @@ header {
     text-decoration: underline;
 }
 
-
 /* FOOTER */
 
 footer {
     text-align: center;
     padding: 25px;
-    background-color: #222;
-    color: white;
+    background-color: var(--color-graphite);
+    color: var(--color-white);
+    border-top: 1px solid var(--color-border);
 }
-
 
 /* RESPONSIVENESS */
 
@@ -270,8 +311,11 @@ footer {
     .hard-skills {
         justify-content: center;
     }
-}
 
+    .home > h1 {
+        margin: 0;
+    }
+}
 
 /* COURSES AND CERTIFICATES */
 
@@ -282,8 +326,8 @@ footer {
     gap: 40px;
 
     padding: 25px;
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: var(--color-graphite);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
 }
 
@@ -296,6 +340,7 @@ footer {
 
 .course-info h4 {
     font-size: 20px;
+    color: var(--color-white);
 }
 
 .certificate {
@@ -303,7 +348,7 @@ footer {
     width: 280px;
     height: auto;
 
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
 
     transition: 0.3s;
@@ -312,7 +357,6 @@ footer {
 .certificate:hover {
     transform: scale(1.03);
 }
-
 
 /* STUDY LINKS */
 
@@ -323,16 +367,19 @@ footer {
 }
 
 .study-links a {
-    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--color-white);
     text-decoration: none;
     transition: 0.3s;
 }
 
 .study-links a:hover {
-    color: #888;
+    color: var(--color-red);
     text-decoration: underline;
 }
-
 
 /* COURSES RESPONSIVENESS */
 
@@ -349,17 +396,9 @@ footer {
         max-width: 350px;
         margin: auto;
     }
-
 }
-
 
 /* YOUTUBE ICON IN STUDY LINKS */
-
-.study-links a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
 .youtube-icon {
     flex-shrink: 0;
@@ -370,12 +409,107 @@ footer {
     transform: scale(1.1);
 }
 
-.home-text hgroup {
+
+/* COMMUNICATION YOUTUBE LINK */
+
+.communication-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 12px;
+
+    color: #C41E2A;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.communication-link img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.communication-link:hover {
+    color: #F2F2F2;
+    text-decoration: underline;
+}
+.communication-description {
+    font-size: 14px !important;
+    color: var(--color-gray);
+    line-height: 1.6 !important;
+    margin-top: 8px;
+    max-width: 550px;
+}
+
+
+/* CONTACT ICONS */
+
+.contact-item {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.home-subtitle {
-    font-size: 20px;
+.contact-item h3 {
+    color: var(--color-white);
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    width: fit-content;
+    color: var(--color-red);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--color-white);
+}
+
+.contact-link:hover .contact-icon {
+    transform: scale(1.15);
+}
+
+/* CERTIFICATE LIGHTBOX */
+
+.certificate {
+    cursor: pointer;
+}
+
+#certificate-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#expanded-certificate {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
 }

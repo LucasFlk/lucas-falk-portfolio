@@ -47,3 +47,15 @@ links.forEach(function(link) {
     });
 
 });
+
+function openCertificate(image) {
+    const lightbox = document.getElementById("certificate-lightbox");
+    const expandedImage = document.getElementById("expanded-certificate");
+
+    expandedImage.src = image.src;
+    lightbox.style.display = "flex";
+}
+
+function closeCertificate() {
+    document.getElementById("certificate-lightbox").style.display = "none";
+}
